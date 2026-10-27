@@ -28,12 +28,12 @@ public class BankAccountManager implements Bank {
   }
 
   @Override
-  public String getAccount(int id) {
+  public BankAccount getAccount(int id) {
     BankAccount account = accounts.get(id);
     if (account != null) {
-      return "Account ID: " + id;
+      return account;
     } else {
-      return "No account found with ID: " + id;
+      return null;
     }
   }
 

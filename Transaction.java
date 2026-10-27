@@ -1,8 +1,12 @@
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 /** Represents a bank account transaction. */
 
 public class Transaction {
+  private static final DateTimeFormatter DATE_TIME_FORMATTER =
+      DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+
   private final String type;
   private final double amount;
   private final LocalDateTime dateTime;
@@ -34,7 +38,7 @@ public class Transaction {
         + ", amount="
         + amount
         + ", dateTime="
-        + dateTime
+        + dateTime.format(DATE_TIME_FORMATTER)
         + "}";
   }
 }

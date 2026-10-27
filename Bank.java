@@ -5,5 +5,5 @@
 public interface Bank {
   void addAccount(BankAccount account);
 
-  String getAccount(int id);
+  BankAccount getAccount(int id);
 }

@@ -63,6 +63,11 @@ public class BankAccount {
     return ownerName;
   }
 
+  /** Updates the account owner's name. */
+  public void setOwnerName(String ownerName) {
+    this.ownerName = ownerName;
+  }
+
   /** Returns the account transaction history. */
   public List<Transaction> getTransactionHistory() {
     return transactionHistory;
